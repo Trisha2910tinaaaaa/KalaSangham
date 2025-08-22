@@ -31,6 +31,7 @@ import {
   Globe,
   Brush,
 } from "lucide-react"
+import Link from "next/link"
 
 const realArtists = [
   {
@@ -172,7 +173,7 @@ export default function KalasanghamApp() {
   const [selectedArtist, setSelectedArtist] = useState(null)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-yellow-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-orange-50 to-red-50">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-orange-200 shadow-sm">
         <div className="container mx-auto px-4 py-4">
@@ -182,7 +183,7 @@ export default function KalasanghamApp() {
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center shadow-lg">
                   <Palette className="w-6 h-6 text-white" />
                 </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full animate-pulse"></div>
+                <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-400 rounded-full animate-pulse"></div>
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
@@ -192,21 +193,21 @@ export default function KalasanghamApp() {
               </div>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="/artists" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+              <Link href="/artists" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
                 Artists
-              </a>
-              <a href="/gallery" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+              </Link>
+              <Link href="/gallery" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
                 Gallery
-              </a>
-              <a href="/artforms" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+              </Link>
+              <Link href="/artforms" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
                 Art Forms
-              </a>
-              <a href="/workshops" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+              </Link>
+              <Link href="/workshops" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
                 Workshops
-              </a>
-              <a href="/ai-analysis" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+              </Link>
+              <Link href="/ai-analysis" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
                 AI Analysis
-              </a>
+              </Link>
             </nav>
             <div className="flex items-center space-x-4">
               <Button variant="outline" className="border-orange-300 text-orange-700 hover:bg-orange-50 bg-transparent">
@@ -222,7 +223,7 @@ export default function KalasanghamApp() {
 
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-100 via-red-100 to-yellow-100"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-100 via-orange-100 to-red-100"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="mehendi-pattern"></div>
         </div>
@@ -232,7 +233,7 @@ export default function KalasanghamApp() {
               <Sparkles className="w-4 h-4 mr-2" />
               Discover India's Living Art Heritage
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-yellow-600 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-orange-600 to-red-600 bg-clip-text text-transparent leading-tight">
               Where Ancient
               <br />
               <span className="text-5xl md:text-7xl">Meets Eternal</span>
@@ -242,26 +243,45 @@ export default function KalasanghamApp() {
               Every purchase preserves a tradition that has survived thousands of years.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
-              >
-                <Globe className="w-5 h-5 mr-2" />
-                Explore Artists
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-orange-300 text-orange-700 hover:bg-orange-50 px-10 py-6 text-lg rounded-full bg-white/80 backdrop-blur-sm"
-              >
-                <Brush className="w-5 h-5 mr-2" />
-                Discover Art Forms
-              </Button>
+              <Link href="/artists">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-2xl transition-all"
+                >
+                  <Globe className="w-5 h-5 mr-2" />
+                  Explore Artists
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
+              <Link href="/artforms">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-orange-300 text-orange-700 hover:bg-orange-50 px-10 py-6 text-lg rounded-full bg-white/80 backdrop-blur-sm"
+                >
+                  <Brush className="w-5 h-5 mr-2" />
+                  Discover Art Forms
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      {/* Why We Exist Section */}
+      <section className="py-16 bg-white border-b border-orange-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8">Why We Exist</h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Traditional Indian artforms are a testament to our rich cultural heritage, yet the artists who keep them
+              alive struggle to find an audience. कलासंगम is a direct bridge. We provide artists with a modern platform
+              to showcase their work and sustain their craft, while giving you a chance to own and understand a piece of
+              history. Every purchase directly supports an artist and helps preserve a dying art.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Featured Artists Preview */}
@@ -435,19 +455,21 @@ export default function KalasanghamApp() {
           </div>
 
           <div className="text-center mt-12">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-4 rounded-full"
-            >
-              Discover All Artists
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
+            <Link href="/artists">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-8 py-4 rounded-full"
+              >
+                Discover All Artists
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Cultural Impact Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl font-bold text-gray-900 mb-8">Why This Matters</h2>
@@ -459,22 +481,22 @@ export default function KalasanghamApp() {
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="text-center">
-                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-orange-600" />
+                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-10 h-10 text-blue-600" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">Direct Support</h3>
                 <p className="text-gray-600">100% of artwork sales go directly to the artists and their communities</p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Heart className="w-10 h-10 text-red-600" />
+                <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Heart className="w-10 h-10 text-orange-600" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">Cultural Preservation</h3>
                 <p className="text-gray-600">Every purchase helps preserve ancient techniques for future generations</p>
               </div>
               <div className="text-center">
-                <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-10 h-10 text-yellow-600" />
+                <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-10 h-10 text-red-600" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">Global Reach</h3>
                 <p className="text-gray-600">Connecting traditional artists with art lovers worldwide</p>
@@ -485,7 +507,7 @@ export default function KalasanghamApp() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-blue-600 via-orange-600 to-red-600 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="mandala-pattern"></div>
         </div>
@@ -497,22 +519,26 @@ export default function KalasanghamApp() {
               the secrets of ancient traditions. Own art that connects you to India's incredible cultural heritage.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-6 text-lg rounded-full shadow-xl"
-              >
-                <Palette className="w-5 h-5 mr-2" />
-                Explore Gallery
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-10 py-6 text-lg rounded-full bg-transparent"
-              >
-                <Heart className="w-5 h-5 mr-2" />
-                Support Artists
-              </Button>
+              <Link href="/gallery">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="bg-white text-orange-600 hover:bg-gray-100 px-10 py-6 text-lg rounded-full shadow-xl"
+                >
+                  <Palette className="w-5 h-5 mr-2" />
+                  Explore Gallery
+                </Button>
+              </Link>
+              <Link href="/artists">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-orange-600 px-10 py-6 text-lg rounded-full bg-transparent"
+                >
+                  <Heart className="w-5 h-5 mr-2" />
+                  Support Artists
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -542,29 +568,29 @@ export default function KalasanghamApp() {
               <h4 className="font-semibold text-orange-400 mb-6 text-lg">Explore</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/artists" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Link href="/artists" className="text-gray-400 hover:text-orange-400 transition-colors">
                     Featured Artists
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/gallery" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Link href="/gallery" className="text-gray-400 hover:text-orange-400 transition-colors">
                     Artwork Gallery
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/artforms" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Link href="/artforms" className="text-gray-400 hover:text-orange-400 transition-colors">
                     Art Traditions
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/workshops" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Link href="/workshops" className="text-gray-400 hover:text-orange-400 transition-colors">
                     Workshops
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/ai-analysis" className="text-gray-400 hover:text-orange-400 transition-colors">
+                  <Link href="/ai-analysis" className="text-gray-400 hover:text-orange-400 transition-colors">
                     AI Art Analysis
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -620,7 +646,7 @@ export default function KalasanghamApp() {
           </div>
 
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p className="text-gray-400">© 2024 कलासंगम. Made with ❤️ for preserving India's cultural heritage.</p>
+            <p className="text-gray-400">© 2025 कलासंगम. Made with ❤️ for preserving India's cultural heritage.</p>
           </div>
         </div>
       </footer>

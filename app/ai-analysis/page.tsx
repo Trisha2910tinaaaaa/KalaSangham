@@ -17,7 +17,7 @@ const sampleAnalyses = [
       "This is a beautiful example of Madhubani art, specifically from the Bharni style characterized by vibrant colors and intricate patterns. The peacock motif is central to Madhubani tradition, symbolizing love, beauty, and grace. The artwork shows traditional geometric patterns with floral elements, painted with natural pigments. The bold outlines and bright colors are hallmarks of this 2,500-year-old art form from Bihar. The use of peacock feathers and lotus motifs suggests themes of divine beauty and spiritual awakening in Hindu culture.",
     artform: "Madhubani",
     region: "Bihar, India",
-    period: "2500+ years old",
+    period: "2,500+ years old",
     significance: "Symbol of love and divine beauty",
   },
   {
@@ -28,7 +28,7 @@ const sampleAnalyses = [
       "This artwork represents authentic Warli tribal art from Maharashtra, characterized by its distinctive white geometric patterns on a dark background. The painting depicts daily village life with human figures engaged in dance, farming, and community activities. Warli art uses only basic geometric shapes - circles for sun and moon, triangles for mountains and trees, and squares for sacred enclosures. The stick-like human figures and animals are typical of this 2,500-year-old tradition, originally painted on mud walls with rice paste.",
     artform: "Warli",
     region: "Maharashtra, India",
-    period: "2500+ years old",
+    period: "2,500+ years old",
     significance: "Depicts tribal life and nature worship",
   },
   {
@@ -68,14 +68,13 @@ export default function AIAnalysisPage() {
     setIsAnalyzing(true)
     setShowAnalysis(false)
 
-    // Simulate AI analysis with realistic delay
     setTimeout(() => {
       setAnalysisResult(
-        "This appears to be a beautiful example of Indian folk art, characterized by its vibrant colors and intricate patterns. Based on the visual elements, this artwork shows traditional motifs including geometric patterns and nature elements, painted with natural pigments. The style suggests influences from classical Indian art traditions, which often depict cultural stories, religious themes, and natural elements. The bold lines and bright colors are hallmarks of folk art forms that have been passed down through generations. The composition and color palette indicate this piece carries cultural significance and represents the rich artistic heritage of India.",
+        "✅ Analysis Complete! This appears to be a classic Madhubani painting, also known as Mithila art. It likely originates from the Mithila region of Bihar, India. The central figure of the goddess Durga on her tiger, surrounded by intricate floral and animal motifs, is a common theme representing power, protection, and the harmony of nature. The use of natural pigments and the double-line border are key identifiers of this style. The geometric patterns and vibrant colors suggest this was created using traditional techniques passed down through generations of women artists in Bihar villages.",
       )
       setIsAnalyzing(false)
       setShowAnalysis(true)
-    }, 3000)
+    }, 2000) // Reduced delay to 2 seconds for better user experience
   }
 
   const analyzeSample = (sample) => {

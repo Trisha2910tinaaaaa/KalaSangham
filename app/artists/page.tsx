@@ -471,9 +471,18 @@ export default function ArtistsPage() {
                                   <p className="text-sm text-gray-600 mb-2">{work.description}</p>
                                   <div className="flex justify-between items-center">
                                     <span className="text-lg font-bold text-orange-600">{work.price}</span>
-                                    <Button size="sm" variant="outline">
-                                      View Details
-                                    </Button>
+                                    {artist.name === "Baua Devi" ? (
+                                      <a
+                                        href="mailto:bauadevi.folkart@gmail.com?subject=Art Purchase Inquiry from KalaSangham&body=Hello Baua Devi, I saw your work on KalaSangham and am interested in purchasing it."
+                                        className="inline-flex items-center px-3 py-1.5 text-sm font-medium text-orange-700 bg-transparent border border-orange-300 rounded-md hover:bg-orange-50 transition-colors"
+                                      >
+                                        Contact Artist
+                                      </a>
+                                    ) : (
+                                      <Button size="sm" variant="outline">
+                                        Contact Artist
+                                      </Button>
+                                    )}
                                   </div>
                                 </CardContent>
                               </Card>

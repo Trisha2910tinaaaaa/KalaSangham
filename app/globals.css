@@ -4,83 +4,83 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color tokens to match professional design brief with diverse Indian art-inspired palette */
-  --background: #ffffff; /* Pure white for clarity */
-  --foreground: #2d2d2d; /* Dark text for readability */
-  --card: #f9f9f9; /* Light card background */
-  --card-foreground: #2d2d2d; /* Dark text on cards */
-  --popover: #ffffff; /* White popover background */
-  --popover-foreground: #2d2d2d; /* Dark popover text */
-  --primary: #ff9933; /* Saffron - representing vibrancy and cultural richness */
-  --primary-foreground: #ffffff; /* White text on primary */
-  --secondary: #003366; /* Deep Blue - symbolizing depth and trust */
-  --secondary-foreground: #ffffff; /* White text on secondary */
-  --muted: #f9f9f9; /* Light muted background */
-  --muted-foreground: #2d2d2d; /* Dark muted text */
-  --accent: #ffd700; /* Gold - for elegance and highlight elements */
-  --accent-foreground: #2d2d2d; /* Dark text on accent */
-  --destructive: #d9534f; /* Red for errors */
-  --destructive-foreground: #ffffff; /* White text on destructive */
-  --border: #e0e0e0; /* Light borders */
-  --input: #ffffff; /* White input background */
-  --ring: rgba(255, 153, 51, 0.5); /* Saffron ring with opacity */
-  --chart-1: #4caf50; /* Emerald Green - reflecting growth and creativity */
-  --chart-2: #d05a29; /* Terracotta - connecting to traditional Indian art */
-  --chart-3: #003366; /* Deep Blue */
-  --chart-4: #ff9933; /* Saffron */
-  --chart-5: #ffd700; /* Gold */
-  --radius: 0.5rem; /* Soft corner radius */
-  --sidebar: #f9f9f9; /* Light sidebar background */
-  --sidebar-foreground: #2d2d2d; /* Dark sidebar text */
-  --sidebar-primary: #ff9933; /* Saffron sidebar actions */
-  --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary */
-  --sidebar-accent: #ffd700; /* Gold sidebar accent */
-  --sidebar-accent-foreground: #2d2d2d; /* Dark text on sidebar accent */
-  --sidebar-border: #e0e0e0; /* Light sidebar border */
-  --sidebar-ring: rgba(255, 153, 51, 0.5); /* Saffron sidebar focus ring */
+  /* Updated color tokens to blue, orange, and red theme as requested */
+  --background: #ffffff;
+  --foreground: #2d2d2d;
+  --card: #f9f9f9;
+  --card-foreground: #2d2d2d;
+  --popover: #ffffff;
+  --popover-foreground: #2d2d2d;
+  --primary: #ff6b35; /* Vibrant Orange */
+  --primary-foreground: #ffffff;
+  --secondary: #1e40af; /* Deep Blue */
+  --secondary-foreground: #ffffff;
+  --muted: #f9f9f9;
+  --muted-foreground: #2d2d2d;
+  --accent: #dc2626; /* Bold Red */
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e0e0e0;
+  --input: #ffffff;
+  --ring: rgba(255, 107, 53, 0.5); /* Orange ring */
+  --chart-1: #1e40af; /* Deep Blue */
+  --chart-2: #ff6b35; /* Vibrant Orange */
+  --chart-3: #dc2626; /* Bold Red */
+  --chart-4: #3b82f6; /* Bright Blue */
+  --chart-5: #f97316; /* Orange accent */
+  --radius: 0.5rem;
+  --sidebar: #f9f9f9;
+  --sidebar-foreground: #2d2d2d;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #dc2626;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e0e0e0;
+  --sidebar-ring: rgba(255, 107, 53, 0.5);
   --font-dm-sans: "DM Sans", sans-serif;
   --font-space-grotesk: "Space Grotesk", sans-serif;
-  /* Added custom color variables for Indian art theme */
-  --terracotta: #d05a29;
-  --emerald: #4caf50;
-  --deep-blue: #003366;
-  --saffron: #ff9933;
-  --gold: #ffd700;
+  /* Added new blue, orange, red color variables */
+  --vibrant-orange: #ff6b35;
+  --deep-blue: #1e40af;
+  --bold-red: #dc2626;
+  --bright-blue: #3b82f6;
+  --orange-accent: #f97316;
 }
 
 .dark {
-  --background: #0f172a; /* Dark slate background */
-  --foreground: #f8fafc; /* Light slate text */
-  --card: #1e293b; /* Dark card background */
-  --card-foreground: #f8fafc; /* Light text on cards */
-  --popover: #0f172a; /* Dark popover background */
-  --popover-foreground: #f8fafc; /* Light popover text */
-  --primary: #ff9933; /* Keep saffron consistent */
-  --primary-foreground: #ffffff; /* White text on primary */
-  --secondary: #003366; /* Keep deep blue consistent */
-  --secondary-foreground: #ffffff; /* White text on secondary */
-  --muted: #1e293b; /* Dark muted background */
-  --muted-foreground: #94a3b8; /* Light slate muted text */
-  --accent: #ffd700; /* Keep gold consistent */
-  --accent-foreground: #2d2d2d; /* Dark text on accent */
-  --destructive: #d9534f; /* Keep destructive consistent */
-  --destructive-foreground: #ffffff; /* White text on destructive */
-  --border: #334155; /* Dark border */
-  --input: #1e293b; /* Dark input background */
-  --ring: rgba(255, 153, 51, 0.5); /* Saffron ring with opacity */
-  --chart-1: #4caf50; /* Keep chart colors consistent */
-  --chart-2: #d05a29;
-  --chart-3: #003366;
-  --chart-4: #ff9933;
-  --chart-5: #ffd700;
-  --sidebar: #0f172a; /* Dark sidebar background */
-  --sidebar-foreground: #f8fafc; /* Light sidebar text */
-  --sidebar-primary: #ff9933; /* Saffron sidebar actions */
-  --sidebar-primary-foreground: #ffffff; /* White text on sidebar primary */
-  --sidebar-accent: #ffd700; /* Gold sidebar accent */
-  --sidebar-accent-foreground: #2d2d2d; /* Dark text on sidebar accent */
-  --sidebar-border: #334155; /* Dark sidebar border */
-  --sidebar-ring: rgba(255, 153, 51, 0.5); /* Saffron sidebar focus ring */
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
+  --primary: #ff6b35;
+  --primary-foreground: #ffffff;
+  --secondary: #1e40af;
+  --secondary-foreground: #ffffff;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #dc2626;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #334155;
+  --input: #1e293b;
+  --ring: rgba(255, 107, 53, 0.5);
+  --chart-1: #1e40af;
+  --chart-2: #ff6b35;
+  --chart-3: #dc2626;
+  --chart-4: #3b82f6;
+  --chart-5: #f97316;
+  --sidebar: #0f172a;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #ff6b35;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #dc2626;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #334155;
+  --sidebar-ring: rgba(255, 107, 53, 0.5);
 }
 
 @theme inline {
@@ -124,11 +124,11 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   /* Added custom color utilities */
-  --color-terracotta: var(--terracotta);
-  --color-emerald: var(--emerald);
+  --color-vibrant-orange: var(--vibrant-orange);
   --color-deep-blue: var(--deep-blue);
-  --color-saffron: var(--saffron);
-  --color-gold: var(--gold);
+  --color-bold-red: var(--bold-red);
+  --color-bright-blue: var(--bright-blue);
+  --color-orange-accent: var(--orange-accent);
 }
 
 @layer base {
@@ -196,7 +196,7 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255, 153, 51, 0.1), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
   background-size: 200% 100%;
   animation: shimmer 2s infinite;
 }
@@ -216,158 +216,154 @@
 
 /* Updated gradient backgrounds with new color palette */
 .gradient-art-bg {
-  background: linear-gradient(135deg, #f9f9f9 0%, #fff5e6 50%, #f0f8ff 100%);
+  background: linear-gradient(135deg, #f0f8ff 0%, #fff5e6 50%, #fef2f2 100%);
 }
 
 .gradient-hero-overlay {
   background: linear-gradient(
     135deg,
-    rgba(255, 153, 51, 0.9) 0%,
-    rgba(0, 51, 102, 0.8) 50%,
-    rgba(212, 90, 41, 0.7) 100%
+    rgba(255, 107, 53, 0.9) 0%,
+    rgba(30, 64, 175, 0.8) 50%,
+    rgba(220, 38, 38, 0.7) 100%
   );
 }
 
-.gradient-saffron {
-  background: linear-gradient(135deg, #ff9933 0%, #ffb366 100%);
+.gradient-orange {
+  background: linear-gradient(135deg, #ff6b35 0%, #f97316 100%);
 }
 
-.gradient-emerald {
-  background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+.gradient-blue {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
 }
 
-.gradient-terracotta {
-  background: linear-gradient(135deg, #d05a29 0%, #e57a4a 100%);
+.gradient-red {
+  background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
 }
 
-/* Added custom utility classes for Indian art theme */
-.text-saffron {
-  color: var(--saffron);
-}
-.text-emerald {
-  color: var(--emerald);
-}
-.text-terracotta {
-  color: var(--terracotta);
+/* Updated custom utility classes for new color theme */
+.text-vibrant-orange {
+  color: var(--vibrant-orange);
 }
 .text-deep-blue {
   color: var(--deep-blue);
 }
-.text-gold {
-  color: var(--gold);
+.text-bold-red {
+  color: var(--bold-red);
+}
+.text-bright-blue {
+  color: var(--bright-blue);
+}
+.text-orange-accent {
+  color: var(--orange-accent);
 }
 
-.bg-saffron {
-  background-color: var(--saffron);
-}
-.bg-emerald {
-  background-color: var(--emerald);
-}
-.bg-terracotta {
-  background-color: var(--terracotta);
+.bg-vibrant-orange {
+  background-color: var(--vibrant-orange);
 }
 .bg-deep-blue {
   background-color: var(--deep-blue);
 }
-.bg-gold {
-  background-color: var(--gold);
+.bg-bold-red {
+  background-color: var(--bold-red);
+}
+.bg-bright-blue {
+  background-color: var(--bright-blue);
+}
+.bg-orange-accent {
+  background-color: var(--orange-accent);
 }
 
-.border-saffron {
-  border-color: var(--saffron);
-}
-.border-emerald {
-  border-color: var(--emerald);
-}
-.border-terracotta {
-  border-color: var(--terracotta);
+.border-vibrant-orange {
+  border-color: var(--vibrant-orange);
 }
 .border-deep-blue {
   border-color: var(--deep-blue);
 }
-.border-gold {
-  border-color: var(--gold);
+.border-bold-red {
+  border-color: var(--bold-red);
+}
+.border-bright-blue {
+  border-color: var(--bright-blue);
+}
+.border-orange-accent {
+  border-color: var(--orange-accent);
 }
 
-/* Warli-inspired geometric patterns */
+/* Updated pattern backgrounds with new color scheme */
 .warli-pattern {
   background-image: radial-gradient(
       circle at 25% 25%,
       transparent 2px,
-      rgba(255, 153, 51, 0.1) 2px,
-      rgba(255, 153, 51, 0.1) 4px,
+      rgba(255, 107, 53, 0.1) 2px,
+      rgba(255, 107, 53, 0.1) 4px,
       transparent 4px
     ),
     radial-gradient(
       circle at 75% 75%,
       transparent 2px,
-      rgba(255, 153, 51, 0.1) 2px,
-      rgba(255, 153, 51, 0.1) 4px,
+      rgba(30, 64, 175, 0.1) 2px,
+      rgba(30, 64, 175, 0.1) 4px,
       transparent 4px
     );
   background-size: 40px 40px;
 }
 
-/* Mehendi-inspired flowing patterns */
 .mehendi-pattern {
   background-image: repeating-linear-gradient(
       45deg,
       transparent,
       transparent 10px,
-      rgba(212, 90, 41, 0.05) 10px,
-      rgba(212, 90, 41, 0.05) 20px
+      rgba(255, 107, 53, 0.05) 10px,
+      rgba(255, 107, 53, 0.05) 20px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 10px,
-      rgba(255, 215, 0, 0.05) 10px,
-      rgba(255, 215, 0, 0.05) 20px
+      rgba(220, 38, 38, 0.05) 10px,
+      rgba(220, 38, 38, 0.05) 20px
     );
 }
 
-/* Pithora-inspired decorative borders */
 .pithora-border {
   border-image: repeating-linear-gradient(
       90deg,
-      #ff9933,
-      #ff9933 10px,
-      #ffd700 10px,
-      #ffd700 20px,
-      #d05a29 20px,
-      #d05a29 30px
+      #ff6b35,
+      #ff6b35 10px,
+      #1e40af 10px,
+      #1e40af 20px,
+      #dc2626 20px,
+      #dc2626 30px
     )
     1;
 }
 
-/* Mandala-inspired circular patterns */
 .mandala-pattern {
   background-image: radial-gradient(
       circle at center,
       transparent 30%,
-      rgba(255, 153, 51, 0.1) 30%,
-      rgba(255, 153, 51, 0.1) 35%,
+      rgba(255, 107, 53, 0.1) 30%,
+      rgba(255, 107, 53, 0.1) 35%,
       transparent 35%
     ),
     radial-gradient(
       circle at center,
       transparent 50%,
-      rgba(255, 215, 0, 0.08) 50%,
-      rgba(255, 215, 0, 0.08) 55%,
+      rgba(30, 64, 175, 0.08) 50%,
+      rgba(30, 64, 175, 0.08) 55%,
       transparent 55%
     );
   background-size: 80px 80px, 120px 120px;
 }
 
-/* Artistic brush stroke effects */
 .brush-stroke-bg {
   background: linear-gradient(
     135deg,
-    rgba(255, 153, 51, 0.1) 0%,
-    rgba(255, 215, 0, 0.05) 25%,
-    rgba(212, 90, 41, 0.08) 50%,
-    rgba(76, 175, 80, 0.06) 75%,
-    rgba(0, 51, 102, 0.1) 100%
+    rgba(255, 107, 53, 0.1) 0%,
+    rgba(30, 64, 175, 0.05) 25%,
+    rgba(220, 38, 38, 0.08) 50%,
+    rgba(59, 130, 246, 0.06) 75%,
+    rgba(249, 115, 22, 0.1) 100%
   );
 }
 
@@ -396,19 +392,19 @@
 
 @keyframes color-shift {
   0% {
-    color: var(--saffron);
+    color: var(--vibrant-orange);
   }
   25% {
-    color: var(--gold);
+    color: var(--deep-blue);
   }
   50% {
-    color: var(--terracotta);
+    color: var(--bold-red);
   }
   75% {
-    color: var(--emerald);
+    color: var(--bright-blue);
   }
   100% {
-    color: var(--saffron);
+    color: var(--vibrant-orange);
   }
 }
 
@@ -437,7 +433,14 @@
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: conic-gradient(from 0deg, var(--saffron), var(--gold), var(--terracotta), var(--emerald), var(--saffron));
+  background: conic-gradient(
+    from 0deg,
+    var(--vibrant-orange),
+    var(--deep-blue),
+    var(--bold-red),
+    var(--bright-blue),
+    var(--vibrant-orange)
+  );
   border-radius: 50%;
   opacity: 0.3;
   animation: spin 8s linear infinite;
@@ -453,7 +456,7 @@
 /* Added decorative section dividers */
 .section-divider {
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--saffron), var(--gold), var(--terracotta), transparent);
+  background: linear-gradient(90deg, transparent, var(--vibrant-orange), var(--deep-blue), var(--bold-red), transparent);
   margin: 4rem 0;
   position: relative;
 }
@@ -466,6 +469,6 @@
   transform: translate(-50%, -50%);
   background: var(--background);
   padding: 0 1rem;
-  color: var(--saffron);
+  color: var(--vibrant-orange);
   font-size: 1.5rem;
 }
