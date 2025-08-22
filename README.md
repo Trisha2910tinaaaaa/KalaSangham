@@ -76,7 +76,7 @@ This project was built using a modern, AI-assisted development workflow:
 
 ## 👨‍💻 Developer
 
-- **Trisha** - [GitHub](https://github.com/Trisha2910tinaaaaa)
+- **Trisha Soni** - [GitHub](https://github.com/Trisha2910tinaaaaa)
 
 ## 📄 License
 
