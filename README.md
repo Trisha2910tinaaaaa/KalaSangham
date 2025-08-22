@@ -22,12 +22,6 @@ A digital platform dedicated to preserving and promoting traditional Indian folk
 **AI API:** Google Gemini Pro Vision  
 **Authentication:** (Planned) Clerk / Auth0 for user accounts  
 **Deployment:** Vercel  
-**Development Tools:** Cursor, GitHub Copilot, v0.dev
-
-This project was built using a modern, AI-assisted development workflow:
-- **v0.dev** was used to rapidly generate initial UI components, accelerating development.
-- **Cursor** and **GitHub Copilot** assisted with boilerplate code and implementation details.
-- This approach allowed a solo developer to focus on crafting the core user experience, AI integration, and solving the core problem within a constrained 24-hour timeframe.
 
 ## 🚀 Getting Started
 
