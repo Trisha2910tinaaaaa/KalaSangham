@@ -16,7 +16,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "ArtVani - Preserving Indian Folk Artforms",
+  title: "KalaSangham - Preserving Indian Folk Artforms",
   description: "Discover and preserve the beauty of Indian folk artforms like Warli, Madhubani, and Pithora",
   generator: "v0.app",
 }
