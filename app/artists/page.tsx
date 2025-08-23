@@ -14,8 +14,16 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { Palette, MapPin, Eye, Quote, BookOpen, Award, Star, Search, Filter, ArrowLeft } from "lucide-react"
+import { Palette, MapPin, Eye, Quote, BookOpen, Award, Star, Search, Filter, ArrowLeft, Check } from "lucide-react"
 import Link from "next/link"
+
+// Verified Badge Component
+const VerifiedBadge = () => (
+  <div className="inline-flex items-center px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200">
+    <Check className="w-3 h-3 mr-1" />
+    Verified
+  </div>
+)
 
 const realArtists = [
   {
@@ -23,7 +31,7 @@ const realArtists = [
     name: "Jivya Soma Mashe",
     artform: "Warli",
     location: "Maharashtra",
-    avatar: "/indian-woman-artist.png",
+    avatar: "https://i.ibb.co/9Hj2F9BW/Jivya-masha.jpg",
     bio: "Internationally acclaimed Warli painting artist who popularized the tribal art form globally. Started painting after losing his mother at age seven, communicating through drawings in dust.",
     experience: "60+ Years",
     specialization: "Traditional Warli tribal paintings",
@@ -50,13 +58,14 @@ const realArtists = [
         image: "/warli-geometric-patterns.png",
       },
     ],
+    isVerified: true, // 2 artworks - less than 3
   },
   {
     id: 2,
     name: "Baua Devi",
     artform: "Madhubani",
     location: "Jitwarpur, Bihar",
-    avatar: "/indian-tribal-woman-artist.png",
+    avatar: "https://i.ibb.co/tMrM5r2Z/baua-devi.jpg",
     bio: "Master Madhubani artist practicing for almost 60 years. Her paintings depict Lord Krishna, Ram, and Sita, narrating mythological stories from Mahabharata and Ramayana.",
     experience: "60+ Years",
     specialization: "Mythological narratives in Madhubani style",
@@ -83,13 +92,14 @@ const realArtists = [
         image: "/madhubani-floral-bihar.png",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
   {
     id: 3,
     name: "Bhuri Bai",
     artform: "Pithora",
     location: "Pitol, Madhya Pradesh",
-    avatar: "/elderly-indian-tribal-artist.png",
+    avatar: "https://i.ibb.co/wrhtk2Rt/bhuri-bai.jpg",
     bio: "First Bhil artist to paint on paper, moving beyond traditional ritualistic wall paintings. Credited with bringing Pithora art to the contemporary world while preserving its sacred essence.",
     experience: "45+ Years",
     specialization: "Sacred Pithora horses and tribal motifs",
@@ -117,13 +127,14 @@ const realArtists = [
         image: "/pithora-horses.png",
       },
     ],
+    isVerified: true, // 2 artworks - less than 3
   },
   {
     id: 4,
     name: "Jangarh Singh Shyam",
     artform: "Gond",
     location: "Madhya Pradesh",
-    avatar: "/placeholder-aoku0.png",
+    avatar: "https://i.ibb.co/hxQDr07f/jangarh-singh.jpg",
     bio: "Legendary Gond artist who created the 'Jangarh Kalam' school of art. First Adivasi artist to achieve widespread fame, known for paintings featuring leaping tigers, Gondi deities, birds, and peacocks.",
     experience: "40+ Years",
     specialization: "Gond tribal art with nature motifs",
@@ -150,13 +161,14 @@ const realArtists = [
         image: "/gond-tiger.png",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
   {
     id: 5,
     name: "Ganga Devi",
     artform: "Madhubani",
     location: "Mithila, Bihar",
-    avatar: "/placeholder.svg",
+    avatar: "https://i.ibb.co/dXPQmr7/ganga-devi.jpg",
     bio: "Leading exponent of Madhubani painting specializing in the kachni (line drawing) style. Her notable works include a Ramayana series and paintings inspired by her travels in the USA.",
     experience: "50+ Years",
     specialization: "Kachni style line drawings",
@@ -175,22 +187,23 @@ const realArtists = [
         title: "Ramayana Series",
         description: "Epic tale told through intricate line work",
         price: "₹60,000",
-        image: "/placeholder.svg",
+        image: "https://i.ibb.co/XZSfD86v/ramayana-series.jpg",
       },
       {
         title: "Life of Mankind",
         description: "Human journey depicted in traditional style",
         price: "₹45,000",
-        image: "/placeholder.svg",
+        image: "https://i.ibb.co/1HXrMpW/life-of-mankind.jpg",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
   {
     id: 6,
     name: "Bhajju Shyam",
     artform: "Gond",
     location: "Madhya Pradesh",
-    avatar: "/placeholder.svg",
+    avatar: "https://i.ibb.co/nNKcCBT4/bhaju-shyam.jpg",
     bio: "Prominent Gond artist and apprentice of Jangarh Singh Shyam. Author and illustrator of several books including 'The London Jungle Book' and 'The Night Life of Trees'.",
     experience: "35+ Years",
     specialization: "Contemporary Gond art and book illustrations",
@@ -209,15 +222,16 @@ const realArtists = [
         title: "London Jungle Book",
         description: "Urban jungle through tribal eyes",
         price: "₹40,000",
-        image: "/placeholder.svg",
+        image: "https://i.ibb.co/4wFbN9yz/london-jb-bhaju-shyam.jpg",
       },
       {
         title: "Night Life of Trees",
         description: "Mystical forest spirits come alive",
         price: "₹50,000",
-        image: "/placeholder.svg",
+        image: "https://i.ibb.co/cKjLGbWc/night-life-bhajju-shyam.jpg",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
 ]
 
@@ -270,6 +284,9 @@ export default function ArtistsPage() {
               </Link>
               <Link href="/workshops" className="text-gray-700 hover:text-orange-600 transition-colors">
                 Workshops
+              </Link>
+              <Link href="/export-ready" className="text-gray-700 hover:text-orange-600 transition-colors">
+                Export Guide
               </Link>
             </nav>
           </div>
@@ -345,7 +362,10 @@ export default function ArtistsPage() {
                         .join("")}
                     </AvatarFallback>
                   </Avatar>
-                  <CardTitle className="text-2xl text-gray-900">{artist.name}</CardTitle>
+                  <div className="flex items-center justify-center space-x-2">
+                    <CardTitle className="text-2xl text-gray-900">{artist.name}</CardTitle>
+                    {artist.isVerified && <VerifiedBadge />}
+                  </div>
                   <CardDescription className="text-orange-600 font-medium text-lg">
                     Master {artist.artform} Artist
                   </CardDescription>
@@ -384,7 +404,10 @@ export default function ArtistsPage() {
                             </AvatarFallback>
                           </Avatar>
                           <div>
-                            <DialogTitle className="text-2xl text-gray-900">{artist.name}</DialogTitle>
+                            <div className="flex items-center space-x-2">
+                              <DialogTitle className="text-2xl text-gray-900">{artist.name}</DialogTitle>
+                              {artist.isVerified && <VerifiedBadge />}
+                            </div>
                             <DialogDescription className="text-lg text-orange-600 font-medium">
                               Master {artist.artform} Artist
                             </DialogDescription>

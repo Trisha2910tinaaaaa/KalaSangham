@@ -30,8 +30,17 @@ import {
   Sparkles,
   Globe,
   Brush,
+  Check,
 } from "lucide-react"
 import Link from "next/link"
+
+// Verified Badge Component
+const VerifiedBadge = () => (
+  <div className="inline-flex items-center px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full border border-green-200">
+    <Check className="w-3 h-3 mr-1" />
+    Verified
+  </div>
+)
 
 const realArtists = [
   {
@@ -66,6 +75,7 @@ const realArtists = [
         image: "/warli-geometric-patterns.png",
       },
     ],
+    isVerified: true, // 2 artworks - less than 3
   },
   {
     id: 2,
@@ -99,6 +109,7 @@ const realArtists = [
         image: "/madhubani-floral-bihar.png",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
   {
     id: 3,
@@ -133,6 +144,7 @@ const realArtists = [
         image: "/pithora-horses.png",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
   {
     id: 4,
@@ -166,6 +178,7 @@ const realArtists = [
         image: "/gond-tiger.png",
       },
     ],
+    isVerified: false, // 2 artworks - less than 3
   },
 ]
 
@@ -207,6 +220,9 @@ export default function KalasanghamApp() {
               </Link>
               <Link href="/ai-analysis" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
                 AI Analysis
+              </Link>
+              <Link href="/export-ready" className="text-gray-700 hover:text-orange-600 transition-colors font-medium">
+                Export Guide
               </Link>
             </nav>
             <div className="flex items-center space-x-4">
@@ -310,7 +326,10 @@ export default function KalasanghamApp() {
                         .join("")}
                     </AvatarFallback>
                   </Avatar>
-                  <CardTitle className="text-xl text-gray-900">{artist.name}</CardTitle>
+                  <div className="flex items-center justify-center space-x-2">
+                    <CardTitle className="text-xl text-gray-900">{artist.name}</CardTitle>
+                    {artist.isVerified && <VerifiedBadge />}
+                  </div>
                   <CardDescription className="text-orange-600 font-medium text-base">
                     Master {artist.artform} Artist
                   </CardDescription>
@@ -349,7 +368,10 @@ export default function KalasanghamApp() {
                               </AvatarFallback>
                             </Avatar>
                             <div>
-                              <DialogTitle className="text-2xl text-gray-900">{artist.name}</DialogTitle>
+                              <div className="flex items-center space-x-2">
+                                <DialogTitle className="text-2xl text-gray-900">{artist.name}</DialogTitle>
+                                {artist.isVerified && <VerifiedBadge />}
+                              </div>
                               <DialogDescription className="text-lg text-orange-600 font-medium">
                                 Master {artist.artform} Artist
                               </DialogDescription>
@@ -590,6 +612,11 @@ export default function KalasanghamApp() {
                 <li>
                   <Link href="/ai-analysis" className="text-gray-400 hover:text-orange-400 transition-colors">
                     AI Art Analysis
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/export-ready" className="text-gray-400 hover:text-orange-400 transition-colors">
+                    Export Guide
                   </Link>
                 </li>
               </ul>

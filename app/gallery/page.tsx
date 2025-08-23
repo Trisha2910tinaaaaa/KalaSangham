@@ -195,6 +195,9 @@ export default function GalleryPage() {
               <Link href="/workshops" className="text-gray-700 hover:text-orange-600 transition-colors">
                 Workshops
               </Link>
+              <Link href="/export-ready" className="text-gray-700 hover:text-orange-600 transition-colors">
+                Export Guide
+              </Link>
             </nav>
           </div>
         </div>
