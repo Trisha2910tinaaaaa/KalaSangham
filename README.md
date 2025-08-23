@@ -12,11 +12,13 @@ A digital platform dedicated to preserving and promoting traditional Indian folk
 
 - **🖼️ Digital Gallery:** Explore curated collections of authentic Warli, Madhubani, and Pithora artworks.
 - **👩‍🎨 Artist Connect:** Browse profiles of talented artists and contact them directly to commission or purchase art.
+- **✅ Verified Artist System:** Artists who upload 3+ artworks receive a special "Verified" badge, ensuring authenticity and building trust for buyers.
 - **🤖 AI Art Explainer:** Powered by Google Gemini Pro Vision. Upload an image of any folk art to get a detailed analysis of its history, symbolism, and cultural significance.
+- **📦 Export Ready Guide:** A comprehensive checklist and resource guide to help artists prepare their artwork for international export, unlocking global market opportunities.
 - **📚 Artform Encyclopedia:** Learn about the rich history and techniques behind each traditional art form.
 - **🎨 Interactive UI:** A beautiful, responsive interface designed with Tailwind CSS, inspired by the art forms it represents.
-
 ## 🛠️ Tech Stack & Development
+
 
 **Frontend:** Next.js, React, Tailwind CSS  
 **AI API:** Google Gemini Pro Vision  
