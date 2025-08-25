@@ -77,7 +77,3 @@ A digital platform dedicated to preserving and promoting traditional Indian folk
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-**Built in 24 hours for CodeFury 8.0 🚀**
